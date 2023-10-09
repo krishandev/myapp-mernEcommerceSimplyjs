@@ -1,38 +1,258 @@
-.App {
+.main-nav{
+  display: grid;
+  grid-template-rows: 50px;
+  background-color: rgb(100, 97, 97);
+  
+  
+}
+
+.main-nav ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-nav ul div{
+  display: flex;
+}
+.main-nav ul li{
+  margin: 20px;
+  list-style-type: none;
+}
+a{
+  color: white;
+  text-decoration: none;
+  font-size: 21px;
+}
+a:hover{
+  color: aqua;
+}
+
+.register{
+  display: grid;
+  min-height: 450px;
+  justify-content: center;
+  align-items: center;
+}
+
+.register form{
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.register form input{
+  margin-top: 10px;
+  width: 20rem;
+  height: 2rem;
+  padding: 1rem;
+  border-radius: 5px;
+}
+.register form button{
+  margin-top: 1rem;
+  height: 2rem;
+  background-color: rgb(16, 92, 120);
+  color: white;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: large;
+  text-transform: uppercase;
+}
+.register form button:hover{
+  background-color: rgb(20, 196, 196);
+}
+
+.login, .forgotpassword, .edituser, .addproduct{
+
+  display: grid;
+  justify-content: center;
+  margin-top: 2rem;
+  align-items: center;
+  min-height: 500px;
+
+}
+
+.login form, .forgotpassword form, .edituser form, .addproduct form{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.login form input, .forgotpassword form input, .edituser form input, .addproduct form input{
+  margin-top: 1rem;
+  width: 20rem;
+  height: 3rem;
+  padding: 1rem;
+  
+}
+.login form button, .forgotpassword form button, .edituser form button, .addproduct form button{
+  margin-top: 1rem;
+  height: 2rem;
+  background-color: rgb(7, 193, 193);
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+
+  border-radius: 5px;
+}
+
+.fp{
+  color: blue;
+  text-decoration: underline;
+  margin-top: 1rem;
+}
+
+input[type="file"]{
+  width: 180px;
+  border: 1px solid gray;
+}
+
+.dashboard{
+  border: 1px solid black;
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.dashboard .user-detail{
+  border: 1px solid red;
+  margin: 2rem;
+  height: 40vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: azure;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.usermenu{
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(110, 154, 193);
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.adminmenu{
+  border: 1px solid red;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+}
+
+.adminmenu table{
+  border: 1px solid rgb(43, 43, 122);
+  padding: 1rem;
+  margin: 1rem;
+  background-color: rgba(204, 249, 234, 0.959);
+  overflow-x: scroll;
+}
+
+.adminmenu table thead tr th{
+  border: 1px solid rgb(192, 241, 202);
+  padding: 2rem;
+  
+}
+.adminmenu table tbody tr td{
+  border: 1px solid rgb(237, 191, 106);
+  text-align: center;
+
+}
+
+.adminmenu table tbody tr td td{
+  border: 1px solid rgb(202, 85, 223);
+  text-align: center;
+  background-color: rgb(42, 129, 236);
+  height: 2rem;
+  width: 3rem;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  
+}
+
+.parent{
+  border: 3px solid rgb(124, 237, 149);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  grid-template-rows: repeat(2, auto);
+  gap: 5px;
+  place-items: center;
+  margin: 1rem;
+}
+.child{
+  border: 2px solid red;
+  
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.child button{
+  margin-left: 10px;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.child button:hover{
+  background-color: gray;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.productdetail{
+  display: flex;
+  margin: 2rem;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.productdetail img{
+  margin: 1rem;
+}
+.detailchild{
+  margin: 1rem;
+}
+.detailchild h2 span{
+  color: rgb(32, 110, 110);
+}
+.detailchild button{
+  margin-top: 1rem;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 5px;
+}
+
+.detailchild button:hover{
+  background-color: gray;
+  color: white;
+}
+
+.parentcart{
+  display: flex;
+
+}
+
+.parentcart .first{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.parentcart .second{
+  margin-left: 260px;
 }
